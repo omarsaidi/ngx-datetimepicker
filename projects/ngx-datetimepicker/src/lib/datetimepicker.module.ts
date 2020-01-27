@@ -4,7 +4,7 @@ import { DatetimepickerContainerComponent } from './themes/datetimepicker-contai
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { DatetimepickerDirective } from './datetimepicker.directive';
-import { DatetimepickerInputDirective } from './datetimepicker-input.directive';
+import { DatetimeInputDirective } from './datetimepicker-input.directive';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
@@ -13,11 +13,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   declarations: [
     DatetimepickerContainerComponent,
     DatetimepickerDirective,
-    DatetimepickerInputDirective
+    DatetimeInputDirective
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     FormsModule,
     BsDatepickerModule.forRoot(),
     TimepickerModule.forRoot()
@@ -28,7 +27,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   exports: [
     DatetimepickerContainerComponent,
     DatetimepickerDirective,
-    DatetimepickerInputDirective,
+    DatetimeInputDirective,
   ]
 })
 export class DatetimepickerModule { }

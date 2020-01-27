@@ -1,32 +1,24 @@
 <div class="data-time-picker-container">
-    <div class="row ml-0 mr-0 flex-center">
-      <div class="pr-0 pb-3 pl-0 pt-0">
-        <bs-datepicker-inline [bsValue]="value" [minDate]="minDate" [maxDate]="maxDate"></bs-datepicker-inline>
-      </div>
-    </div>
-    <div class="row ml-0 mr-0 flex-center">
-      <div class="pr-0 pb-3 pl-0 pt-0">
-        <timepicker [(ngModel)]="value"
-        [showMeridian]="false"
-        [secondsPlaceholder]="secondsPlaceholder"
-        [minutesPlaceholder]="minutesPlaceholder"
-        [hoursPlaceholder]="hoursPlaceholder"
-        [meridians]="meridians"
-        [showSeconds]="showSeconds"
-        [showMinutes]="showMinutes"
-        [showMeridian]="showMeridian"
-        [showSpinners]="showSpinners"
-        [arrowkeys]="arrowkeys"
-        [mousewheel]="mousewheel"
-        [disabled]="disabled"
-        [readonlyInput]="readonlyInput"
-        [secondsStep]="secondsStep"
-        [minuteStep]="minuteStep"
-        [hourStep]="hourStep"></timepicker>
-      </div>
-    </div>
-    <div class="row ml-0 mr-0 flex-center buttons-container form-group">
-      <button class="btn" (click)="onCancelClicked($event)">Annuler</button>
-      <button class="btn" (click)="onSetClicked($event)">Valider</button>
+  <div class="row ml-0 mr-0 flex-center">
+    <div class="pr-0 pb-3 pl-0 pt-0">
+      <bs-datepicker-inline 
+      [bsValue]="value" 
+      
+      ></bs-datepicker-inline>
+    </div>{{showMeridian}}
+  </div>
+  <div class="row ml-0 mr-0 flex-center">
+    <div class="pr-0 pb-3 pl-0 pt-0">
+      <timepicker [(ngModel)]="value" [secondsPlaceholder]="secondsPlaceholder"
+        [minutesPlaceholder]="minutesPlaceholder" [hoursPlaceholder]="hoursPlaceholder" [min]="min" [max]="max"
+        [meridians]="meridians" [showSeconds]="showSeconds" [showMinutes]="showMinutes" [showMeridian]="showMeridian"
+        [showSpinners]="showSpinners" [arrowkeys]="arrowkeys" [mousewheel]="mousewheel" [disabled]="disabled"
+        [readonlyInput]="readonlyInput" [secondsStep]="secondsStep" [minuteStep]="minuteStep" [hourStep]="hourStep">
+      </timepicker>
     </div>
   </div>
+  <div class="row ml-0 mr-0 flex-center buttons-container form-group">
+    <button class="btn" (click)="onCancelClicked($event)">Annuler</button>
+    <button class="btn" (click)="onSetClicked($event)">Valider</button>
+  </div>
+</div>

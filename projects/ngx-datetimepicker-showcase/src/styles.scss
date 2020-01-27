@@ -1,14 +1,48 @@
-.prettyprint {
-  white-space: pre-wrap;
-  background: #f5f6f7;
-  font-family: Monaco, "Lucida Console", monospace;
-  color: #5c707a;
-  width: auto;
-  overflow: auto;
-  position: relative;
-  padding: 16px 32px;
-  font-size: 13px;
-  line-height: 24px;
-  margin-bottom: 24px;
-  border-radius: 4px;
+.main {
+  padding-top: 64px;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  .prettyprint {
+    white-space: pre-wrap;
+    background: #f5f6f7;
+    font-family: Monaco, "Lucida Console", monospace;
+    color: #5c707a;
+    width: auto;
+    overflow: auto;
+    position: relative;
+    padding: 16px 32px;
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+  }
+
+  .main-container {
+    -webkit-box-flex: 0;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    margin-left: 16.66667%;
+    .content {
+      padding: 30px 30px 120px;
+    }
+  }
+
+  .add-nav {
+    -webkit-box-flex: 0;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+    padding-right: 5px;
+    position: fixed;
+    top: 84px;
+    left: 83.33%;
+    right: 0;
+    max-height: calc(100vh - 104px);
+    overflow: auto;
+    direction: rtl;
+  }
+
+  .anchor-link {
+    display: none;
+}
 }

@@ -5,7 +5,7 @@
                 <h1 *ngIf="name || src">{{name}}</h1>
             </div>
             <div id="content" class="content-box">
-                <div id="example" class="section">
+                <div id="examples" class="section">
                     <div class="item">
                         <br>
                         <p>Datetimepicker is a highly configurable component that adds datetimepicker functionality to
@@ -16,13 +16,55 @@
                         <pre class="prettyprint lang-bash prettyprinted">
                             <span class="pln">ng add ngx-datetimepicker</span>
                         </pre>
-                        <h2>Examples</h2>
+                        <h2 id="examples">Examples
+                            <a class="anchor-link" routerlink="." href="#/datetimepicker#examples">#</a>
+                        </h2>
+                        <h3 id="date">Date
+                            <a class="anchor-link" routerlink="." href="#/datetimepicker#date">#</a>
+                        </h3>
                         <div>
-                            <h3>Basic</h3>
-                            <div class="row">
-                                <div class="col-xs-12 col-12 col-md-4 form-group">
-                                    <input type="text" placeholder="Datetimepicker" class="form-control" datetimepicker>
-                                </div>
+                            <h4>
+                                Basic<a class="anchor-link" routerlink="." href="#/datetimepicker#basic">#</a>
+                             </h4>
+                            <div>
+                                <app-basic></app-basic>
+                            </div>
+                            <h4>With animation</h4>
+                            <p>You can enable animation via <code>isAnimated</code> config option</p>
+                            <div>
+                                <app-animated></app-animated>
+                            </div>
+                            <h4>Initial state</h4>
+                            <div>
+                                <app-date-initial-state></app-date-initial-state>
+                            </div>
+                            <h4>Custom date format</h4>
+                            <p>You can easily change the date format by specifying the <code>dateInputFormat</code>
+                                in <code>[bsConfig]</code>
+                            </p>
+                            <p>To set your own date format you can use variety of formats provided by
+                                <a href="https://momentjs.com/docs/#/displaying/format/" target="_blank">moment.js</a>
+                            </p>
+                            <p>The following examples show how to use several date formats inside a form:</p>
+                            <ul>
+                                <li><code>YYYY-MM-DD</code></li>
+                                <li><code>MM/DD/YYYY</code></li>
+                                <li><code>MMMM Do YYYY,h:mm:ss a</code></li>
+                            </ul>
+
+                            <div>
+                                <app-custom-date-format></app-custom-date-format>
+                            </div>
+                        </div>
+                        <h3 id="time">Time
+                            <a class="anchor-link" routerlink="." href="#/datetimepicker#time">#</a>
+                        </h3>
+                        <div>
+                            <h4 id="meridian">
+                                Meridian<a class="anchor-link" routerlink="." href="#/datetimepicker#meridian">#</a>
+                             </h4>
+                            <div>
+                                <app-meridian></app-meridian>
                             </div>
                         </div>
                     </div>
@@ -30,4 +72,5 @@
             </div>
         </div>
     </section>
+    <add-nav class="add-nav"></add-nav>
 </main>

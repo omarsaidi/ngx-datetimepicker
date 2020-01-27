@@ -6,18 +6,22 @@ import { ComponentLoader, ComponentLoaderFactory } from 'ngx-bootstrap/component
 import { DatetimepickerContainerComponent } from './themes/datetimepicker-container.component';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Subscription } from 'rxjs';
+import { TimepickerConfig } from 'ngx-bootstrap/timepicker';
 
 @Directive({
-  selector: '[datetimepicker]'
+  selector: '[datetimepicker]',
+  exportAs: 'datetimepicker'
 })
 export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
 
   constructor(public _datepickerConfig: BsDatepickerConfig,
+    public _timepickerConfig: TimepickerConfig,
     _elementRef: ElementRef,
     _renderer: Renderer2,
     _viewContainerRef: ViewContainerRef,
     cis: ComponentLoaderFactory) {
     Object.assign(this, this._datepickerConfig);
+    Object.assign(this, this._timepickerConfig);
     this._datetimepicker = cis.createLoader<DatetimepickerContainerComponent>(
       _elementRef,
       _viewContainerRef,
@@ -166,12 +170,15 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
     this.setDatePickerConfig();
 
     this._datetimepickerRef = this._datetimepicker
-      .provide({ provide: BsDatepickerConfig, useValue: this._datepickerConfig })
+      .provide([
+        { provide: BsDatepickerConfig, useValue: this._datepickerConfig },
+        { provide: TimepickerConfig, useValue: this._timepickerConfig }
+      ])
       .attach(DatetimepickerContainerComponent)
       .to(this.container)
       .position({ attachment: this.placement })
       .show({ placement: this.placement });
-
+      this._datetimepickerRef.instance.value = this._bsValue;
     // if date changes from external source (model -> view)
     this._subs.push(
       this.bsValueChange.subscribe((value: Date) => {
@@ -229,4 +236,38 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
   ngOnDestroy(): void {
     this._datetimepicker.dispose();
   }
+  /** hours change step */
+  @Input() hourStep: number;
+  /** hours change step */
+  @Input() minuteStep: number;
+  /** seconds change step */
+  @Input() secondsStep: number;
+  /** if true hours and minutes fields will be readonly */
+  @Input() readonlyInput: boolean;
+  /** if true hours and minutes fields will be disabled */
+  @Input() disabled: boolean;
+  /** if true scroll inside hours and minutes inputs will change time */
+  @Input() mousewheel: boolean;
+  /** if true the values of hours and minutes can be changed using the up/down arrow keys on the keyboard */
+  @Input() arrowkeys: boolean;
+  /** if true spinner arrows above and below the inputs will be shown */
+  @Input() showSpinners: boolean;
+  /** if true meridian button will be shown */
+  @Input() showMeridian: boolean;
+  /** show minutes in timepicker */
+  @Input() showMinutes: boolean;
+  /** show seconds in timepicker */
+  @Input() showSeconds: boolean;
+  /** meridian labels based on locale */
+  @Input() meridians: string[];
+  /** minimum time user can select */
+  @Input() min: Date;
+  /** maximum time user can select */
+  @Input() max: Date;
+  /** placeholder for hours field in timepicker */
+  @Input() hoursPlaceholder: string;
+  /** placeholder for minutes field in timepicker */
+  @Input() minutesPlaceholder: string;
+  /** placeholder for seconds field in timepicker */
+  @Input() secondsPlaceholder: string;
 }

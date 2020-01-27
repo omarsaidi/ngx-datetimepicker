@@ -1,23 +1,33 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, Renderer2, ElementRef } from '@angular/core';
 import { DatetimepickerAbstractComponent } from '../base/datetimepicker-container';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { TimepickerConfig } from 'ngx-bootstrap/timepicker';
 
 @Component({
   selector: 'lib-datetimepicker-container',
   templateUrl: './datetimepicker-container.component.html',
-  styles: []
+  styleUrls: ['./datetimepicker-container.component.scss']
 })
 export class DatetimepickerContainerComponent extends DatetimepickerAbstractComponent implements OnInit {
   private _value: Date;
   valueChange: EventEmitter<Date> = new EventEmitter<Date>();
 
-  constructor() {
+  constructor(
+    datepickerConfig: BsDatepickerConfig,
+    timepickerConfig: TimepickerConfig,
+    private readonly renderer: Renderer2,
+    private readonly element: ElementRef,) {
     super();
+    Object.assign(this, timepickerConfig);
+    renderer.setStyle(element.nativeElement, 'display', 'block');
+    renderer.setStyle(element.nativeElement, 'position', 'absolute');
   }
 
   get value() {
     return this._value;
   }
   set value(value: Date) {
+    console.log("DatetimepickerContainerComponent: set value");
     this._value = value;
   }
 
@@ -25,7 +35,7 @@ export class DatetimepickerContainerComponent extends DatetimepickerAbstractComp
   }
 
   public onCancelClicked(event: any): void {
-   // this.hidePicker$.next(null);
+    // this.hidePicker$.next(null);
     event.preventDefault();
     return;
   }
