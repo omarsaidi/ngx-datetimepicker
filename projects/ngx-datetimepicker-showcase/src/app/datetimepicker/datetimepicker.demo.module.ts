@@ -15,6 +15,8 @@ import { CustomMeridianComponent } from './demos/custom-meridian/custom-meridian
 import { MinMaxTimeComponent } from './demos/min-max-time/min-max-time.component';
 import { ToggleMinutesSecondesComponent } from './demos/toggle-minutes-secondes/toggle-minutes-secondes.component';
 import { CustomStepsComponent } from './demos/custom-steps/custom-steps.component';
+import { CustomValidationComponent } from './demos/custom-validation/custom-validation.component';
+import { CustomValidationInvalidEventComponent } from './demos/custom-validation-invalid-event/custom-validation-invalid-event.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { CustomStepsComponent } from './demos/custom-steps/custom-steps.componen
     CustomMeridianComponent,
     MinMaxTimeComponent,
     ToggleMinutesSecondesComponent,
-    CustomStepsComponent
+    CustomStepsComponent,
+    CustomValidationComponent,
+    CustomValidationInvalidEventComponent
   ],
   imports: [
     CommonModule,
