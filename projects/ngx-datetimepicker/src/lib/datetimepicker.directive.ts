@@ -1,7 +1,8 @@
-import { 
-  Directive, OnInit, OnDestroy, OnChanges, Input, 
-  ComponentRef, SimpleChanges, EventEmitter, Output, 
-  ElementRef, Renderer2, ViewContainerRef } from '@angular/core';
+import {
+  Directive, OnInit, OnDestroy, OnChanges, Input,
+  ComponentRef, SimpleChanges, EventEmitter, Output,
+  ElementRef, Renderer2, ViewContainerRef
+} from '@angular/core';
 import { ComponentLoader, ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
 import { DatetimepickerContainerComponent } from './themes/datetimepicker-container.component';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
@@ -33,12 +34,10 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
   /**
    * Emits an event when the datepicker is shown
    */
-  /* tslint:disable-next-line: no-any*/
   @Output() onShown: EventEmitter<any>;
   /**
    * Emits an event when the datepicker is hidden
    */
-  /* tslint:disable-next-line: no-any*/
   @Output() onHidden: EventEmitter<any>;
 
   _bsValue: Date;
@@ -71,7 +70,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
   /**
    * Config object for datepicker
    */
-  @Input() bsConfig: Partial<BsDatepickerConfig>;
+  @Input() config: Partial<BsDatepickerConfig>;
   /**
    * Placement of a datepicker. Accepts: "top", "bottom", "left", "right"
    */
@@ -92,27 +91,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
 
   @Input() outsideEsc = true;
 
-  /**
-   * Indicates whether datepicker's content is enabled or not
-   */
-  @Input() isDisabled: boolean;
-  /**
-   * Minimum date which is available for selection
-   */
-  @Input() minDate: Date;
-  /**
-   * Maximum date which is available for selection
-   */
-  @Input() maxDate: Date;
-  /**
-   * Disable Certain days in the week
-   */
-  @Input() daysDisabled: number[];
 
-  /**
-   * Disable specific dates
-   */
-  @Input() datesDisabled: Date[];
 
   /**
    * Emits when datepicker value has been changed
@@ -130,14 +109,14 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
       triggers: this.triggers,
       show: () => this.show()
     });
-    this.setDatePickerConfig();
+    //this.setDatePickerConfig();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (!this._datetimepickerRef || !this._datetimepickerRef.instance) {
       return;
     }
-
+    console.log(`changes: ${changes.showMeridian}`)
     if (changes.minDate) {
       this._datetimepickerRef.instance.minDate = this.minDate;
     }
@@ -157,6 +136,10 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
     if (changes.isDisabled) {
       this._datetimepickerRef.instance.isDisabled = this.isDisabled;
     }
+    // Time
+    if (changes.showMeridian) {
+      this._datetimepickerRef.instance.showMeridian = this.showMeridian;
+    }
   }
   /**
    * Opens an element’s datepicker. This is considered a “manual” triggering of
@@ -168,6 +151,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
     }
 
     this.setDatePickerConfig();
+    this.setTimePickerConfig();
 
     this._datetimepickerRef = this._datetimepicker
       .provide([
@@ -178,7 +162,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
       .to(this.container)
       .position({ attachment: this.placement })
       .show({ placement: this.placement });
-      this._datetimepickerRef.instance.value = this._bsValue;
+    this._datetimepickerRef.instance.value = this._bsValue;
     // if date changes from external source (model -> view)
     this._subs.push(
       this.bsValueChange.subscribe((value: Date) => {
@@ -224,18 +208,62 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
    * Set config for datepicker
    */
   setDatePickerConfig(): void {
-    this._datepickerConfig = Object.assign({}, this._datepickerConfig, this.bsConfig, {
+    this._datepickerConfig = Object.assign({}, this._datepickerConfig, this.config, {
       value: this._bsValue,
       isDisabled: this.isDisabled,
-      minDate: this.minDate || this.bsConfig && this.bsConfig.minDate,
-      maxDate: this.maxDate || this.bsConfig && this.bsConfig.maxDate,
-      daysDisabled: this.daysDisabled || this.bsConfig && this.bsConfig.daysDisabled,
-      datesDisabled: this.datesDisabled || this.bsConfig && this.bsConfig.datesDisabled
+      minDate: this.minDate || this.config && this.config.minDate,
+      maxDate: this.maxDate || this.config && this.config.maxDate,
+      daysDisabled: this.daysDisabled || this.config && this.config.daysDisabled,
+      datesDisabled: this.datesDisabled || this.config && this.config.datesDisabled
+    });
+  }
+  setTimePickerConfig(): void {
+    this._timepickerConfig = Object.assign({}, this._timepickerConfig, {
+      hourStep: this.hourStep,
+      minuteStep: this.minuteStep,
+      secondsStep: this.secondsStep,
+      readonlyInput: this.readonlyInput,
+      disabled: this.disabled,
+      mousewheel: this.mousewheel,
+      arrowkeys: this.arrowkeys,
+      showSpinners: this.showSpinners,
+      showMeridian: this.showMeridian,
+      showMinutes: this.showMinutes,
+      showSeconds: this.showSeconds,
+      meridians: this.meridians,
+      min: this.min,
+      max: this.max,
+      hoursPlaceholder: this.hoursPlaceholder,
+      minutesPlaceholder: this.minutesPlaceholder,
+      secondsPlaceholder: this.secondsPlaceholder
     });
   }
   ngOnDestroy(): void {
     this._datetimepicker.dispose();
   }
+
+  /**
+   * Indicates whether datepicker's content is enabled or not
+   */
+  @Input() isDisabled: boolean;
+  /**
+   * Minimum date which is available for selection
+   */
+  @Input() minDate: Date;
+  /**
+   * Maximum date which is available for selection
+   */
+  @Input() maxDate: Date;
+  /**
+   * Disable Certain days in the week
+   */
+  @Input() daysDisabled: number[];
+
+  /**
+   * Disable specific dates
+   */
+  @Input() datesDisabled: Date[];
+
   /** hours change step */
   @Input() hourStep: number;
   /** hours change step */

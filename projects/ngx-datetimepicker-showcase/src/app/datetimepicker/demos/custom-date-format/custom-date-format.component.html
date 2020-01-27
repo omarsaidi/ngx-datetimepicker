@@ -6,7 +6,7 @@
           #datetimepickerYMD="datetimepicker"
           datetimepicker
           formControlName="dateYMD"
-          [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
+          [config]="{ dateInputFormat: 'YYYY-MM-DD' }">
       </div>
       <div class="col-xs-12 col-12 col-md-3 form-group">
         <button class="btn btn-success" (click)="datetimepickerYMD.toggle()" [attr.aria-expanded]="datetimepickerYMD.isOpen" type="button">Date Picker</button>
@@ -21,7 +21,7 @@
           #datetimepickerMDY="datetimepicker"
           datetimepicker
           formControlName="dateMDY"
-          [bsConfig]="{ dateInputFormat: 'MM/DD/YYYY' }">
+          [config]="{ dateInputFormat: 'MM/DD/YYYY' }">
       </div>
       <div class="col-xs-12 col-12 col-md-3 form-group">
         <button class="btn btn-success" (click)="datetimepickerMDY.toggle()" [attr.aria-expanded]="datetimepickerMDY.isOpen" type="button">Date Picker</button>
@@ -36,7 +36,7 @@
           #datetimepickerFull="datetimepicker"
           datetimepicker
           formControlName="dateFull"
-          [bsConfig]="{ dateInputFormat: 'MMMM Do YYYY, h:mm:ss a' }">
+          [config]="{ dateInputFormat: 'MMMM Do YYYY, h:mm:ss a' }">
       </div>
       <div class="col-xs-12 col-12 col-md-3 form-group">
         <button class="btn btn-success" (click)="datetimepickerFull.toggle()" [attr.aria-expanded]="datetimepickerFull.isOpen" type="button">Date Picker</button>

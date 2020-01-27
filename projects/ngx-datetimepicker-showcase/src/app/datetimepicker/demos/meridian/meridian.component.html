@@ -1,7 +1,8 @@
 <input class="form-control" #drp="datetimepicker" datetimepicker [showMeridian]="ismeridian" [(ngModel)]="mytime">
 <pre class="alert alert-info">Time is: {{mytime}}</pre>
-
 <br>
 
 <button type="button" class="btn btn-info" (click)="toggleMode()">12H / 24H</button>
+<datetimepicker-container [(ngModel)]="mytime" [showMeridian]="ismeridian"></datetimepicker-container>
+
 

@@ -4,7 +4,7 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { TimepickerConfig } from 'ngx-bootstrap/timepicker';
 
 @Component({
-  selector: 'lib-datetimepicker-container',
+  selector: 'datetimepicker-container',
   templateUrl: './datetimepicker-container.component.html',
   styleUrls: ['./datetimepicker-container.component.scss']
 })
@@ -27,7 +27,6 @@ export class DatetimepickerContainerComponent extends DatetimepickerAbstractComp
     return this._value;
   }
   set value(value: Date) {
-    console.log("DatetimepickerContainerComponent: set value");
     this._value = value;
   }
 
