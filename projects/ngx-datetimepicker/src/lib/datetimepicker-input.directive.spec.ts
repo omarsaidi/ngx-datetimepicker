@@ -1,8 +1,8 @@
-import { DatetimepickerInputDirective } from './datetimepicker-input.directive';
+import { DatetimeInputDirective } from './datetimepicker-input.directive';
 
 describe('DatetimepickerInputDirective', () => {
   it('should create an instance', () => {
-    const directive = new DatetimepickerInputDirective();
+    const directive = new DatetimeInputDirective();
     expect(directive).toBeTruthy();
   });
 });

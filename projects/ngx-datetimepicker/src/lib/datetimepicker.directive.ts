@@ -40,17 +40,22 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
    */
   @Output() onHidden: EventEmitter<any>;
 
-  _bsValue: Date;
+  _value: Date;
+  /**
+   * Emits when datepicker value has been changed
+   */
+  @Output() valueChange: EventEmitter<Date> = new EventEmitter();
+
   /**
    * Initial value of datepicker
    */
   @Input()
-  set bsValue(value: Date) {
-    if (this._bsValue && value && this._bsValue.getTime() === value.getTime()) {
+  set value(newValue: Date) {
+    if (this._value && newValue && this._value.getTime() === newValue.getTime()) {
       return;
     }
-    this._bsValue = value;
-    this.bsValueChange.emit(value);
+    this._value = newValue;
+    this.valueChange.emit(newValue);
   }
   /**
      * Returns whether or not the datepicker is currently being shown
@@ -91,13 +96,6 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
 
   @Input() outsideEsc = true;
 
-
-
-  /**
-   * Emits when datepicker value has been changed
-   */
-  @Output() bsValueChange: EventEmitter<Date> = new EventEmitter();
-
   protected _subs: Subscription[] = [];
   private _datetimepicker: ComponentLoader<DatetimepickerContainerComponent>;
   private _datetimepickerRef: ComponentRef<DatetimepickerContainerComponent>;
@@ -116,7 +114,6 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
     if (!this._datetimepickerRef || !this._datetimepickerRef.instance) {
       return;
     }
-    console.log(`changes: ${changes.showMeridian}`)
     if (changes.minDate) {
       this._datetimepickerRef.instance.minDate = this.minDate;
     }
@@ -162,10 +159,10 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
       .to(this.container)
       .position({ attachment: this.placement })
       .show({ placement: this.placement });
-    this._datetimepickerRef.instance.value = this._bsValue;
+    this._datetimepickerRef.instance.value = this._value;
     // if date changes from external source (model -> view)
     this._subs.push(
-      this.bsValueChange.subscribe((value: Date) => {
+      this.valueChange.subscribe((value: Date) => {
         this._datetimepickerRef.instance.value = value;
       })
     );
@@ -173,7 +170,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
     // if date changes from picker (view -> model)
     this._subs.push(
       this._datetimepickerRef.instance.valueChange.subscribe((value: Date) => {
-        this.bsValue = value;
+        this.value = value;
         this.hide();
       })
     );
@@ -209,7 +206,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
    */
   setDatePickerConfig(): void {
     this._datepickerConfig = Object.assign({}, this._datepickerConfig, this.config, {
-      value: this._bsValue,
+      value: this._value,
       isDisabled: this.isDisabled,
       minDate: this.minDate || this.config && this.config.minDate,
       maxDate: this.maxDate || this.config && this.config.maxDate,

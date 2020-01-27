@@ -38,7 +38,7 @@ export class DatetimeInputDirective implements ControlValueAccessor, Validator {
     private _elRef: ElementRef,
     private changeDetection: ChangeDetectorRef) {
     // update input value on datepicker value update
-    this._picker.bsValueChange.subscribe((value: Date) => {
+    this._picker.valueChange.subscribe((value: Date) => {
       this._setInputValue(value);
       if (this._value !== value) {
         this._value = value;
@@ -79,7 +79,7 @@ export class DatetimeInputDirective implements ControlValueAccessor, Validator {
       }
     }
 
-    this._picker.bsValue = this._value;
+    this._picker.value = this._value;
   }
   registerOnChange(fn: any): void {
     this._onChange = fn;

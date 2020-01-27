@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Renderer2, ElementRef } from '@angular/core';
+import { Component, EventEmitter, Renderer2, ElementRef } from '@angular/core';
 import { DatetimepickerAbstractComponent } from '../base/datetimepicker-container';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { TimepickerConfig } from 'ngx-bootstrap/timepicker';
@@ -8,7 +8,7 @@ import { TimepickerConfig } from 'ngx-bootstrap/timepicker';
   templateUrl: './datetimepicker-container.component.html',
   styleUrls: ['./datetimepicker-container.component.scss']
 })
-export class DatetimepickerContainerComponent extends DatetimepickerAbstractComponent implements OnInit {
+export class DatetimepickerContainerComponent extends DatetimepickerAbstractComponent {
   private _value: Date;
   valueChange: EventEmitter<Date> = new EventEmitter<Date>();
 
@@ -26,11 +26,8 @@ export class DatetimepickerContainerComponent extends DatetimepickerAbstractComp
   get value() {
     return this._value;
   }
-  set value(value: Date) {
-    this._value = value;
-  }
-
-  ngOnInit() {
+  set value(newValue: Date) {
+    this._value = newValue;
   }
 
   public onCancelClicked(event: any): void {
