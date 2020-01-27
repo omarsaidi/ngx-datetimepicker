@@ -1,0 +1,10 @@
+<input class="form-control" datetimepicker [showMinutes]="showMin" [showSeconds]="showSec" [(ngModel)]="myTime"
+[showMeridian]="ismeridian">
+<pre class="alert alert-info">Time is: {{myTime}}<br>showMinutes: {{showMin}}<br>showSeconds: {{showSec}}</pre>
+
+<button class="btn btn-default text-center" (click)="toggleMinutes()">
+  {{showMin? 'Hide minutes' : 'Show minutes'}}
+</button>
+<button class="btn btn-default text-center" (click)="toggleSeconds()">
+  {{showSec? 'Hide seconds' : 'Show seconds'}}
+</button>
