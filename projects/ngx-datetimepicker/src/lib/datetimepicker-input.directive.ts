@@ -1,9 +1,9 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[bsDatetimepickerInput]'
+  selector: '[datetimepickerInput]'
 })
-export class BsDatetimepickerInputDirective {
+export class DatetimepickerInputDirective {
 
   constructor() { }
 

@@ -8,9 +8,9 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Subscription } from 'rxjs';
 
 @Directive({
-  selector: '[bsDatetimepicker]'
+  selector: '[datetimepicker]'
 })
-export class BsDatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
+export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
 
   constructor(public _datepickerConfig: BsDatepickerConfig,
     _elementRef: ElementRef,
