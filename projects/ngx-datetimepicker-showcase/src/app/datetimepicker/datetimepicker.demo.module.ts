@@ -27,6 +27,7 @@ import {
 } from 'ngx-bootstrap/locale';
 import { LocaleData, defineLocale } from 'ngx-bootstrap/chronos';
 import { PlacementComponent } from './demos/placement/placement.component';
+import { ThemesComponent } from './demos/themes/themes.component';
 
 const locales = [
   arLocale, bgLocale, caLocale, csLocale, daLocale, deLocale, enGbLocale, esDoLocale, esLocale, esUsLocale, etLocale, frLocale,
@@ -58,7 +59,8 @@ locales.forEach((locale: LocaleData) => {
     CustomValidationComponent,
     CustomValidationInvalidEventComponent,
     ChangeLocaleComponent,
-    PlacementComponent
+    PlacementComponent,
+    ThemesComponent
   ],
   imports: [
     CommonModule,

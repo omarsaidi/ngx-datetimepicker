@@ -93,7 +93,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
   /**
    * A selector specifying the element the datepicker should be appended to.
    */
-  @Input() container: string;
+  @Input() container: string = 'body';
 
   @Input() outsideEsc = true;
 
