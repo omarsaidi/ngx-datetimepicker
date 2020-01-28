@@ -17,11 +17,11 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
 
   constructor(public _datepickerConfig: BsDatepickerConfig,
     public _timepickerConfig: TimepickerConfig,
-    _elementRef: ElementRef,
+    private readonly _elementRef: ElementRef,
     _renderer: Renderer2,
     _viewContainerRef: ViewContainerRef,
     cis: ComponentLoaderFactory) {
-      this._datepickerConfig.dateInputFormat = 'LLL';
+    this._datepickerConfig.dateInputFormat = 'LLL';
     Object.assign(this, this._datepickerConfig);
     Object.assign(this, this._timepickerConfig);
     this._datetimepicker = cis.createLoader<DatetimepickerContainerComponent>(
@@ -93,7 +93,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
   /**
    * A selector specifying the element the datepicker should be appended to.
    */
-  @Input() container = 'body';
+  @Input() container: string;
 
   @Input() outsideEsc = true;
 
@@ -156,7 +156,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
         { provide: TimepickerConfig, useValue: this._timepickerConfig }
       ])
       .attach(DatetimepickerContainerComponent)
-      .to(this.container)
+      .to(this.container || this._elementRef)
       .position({ attachment: this.placement })
       .show({ placement: this.placement });
     this._datetimepickerRef.instance.value = this._value;
