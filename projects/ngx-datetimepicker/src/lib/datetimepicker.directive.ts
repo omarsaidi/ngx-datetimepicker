@@ -21,6 +21,7 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
     _renderer: Renderer2,
     _viewContainerRef: ViewContainerRef,
     cis: ComponentLoaderFactory) {
+      this._datepickerConfig.dateInputFormat = 'LLL';
     Object.assign(this, this._datepickerConfig);
     Object.assign(this, this._timepickerConfig);
     this._datetimepicker = cis.createLoader<DatetimepickerContainerComponent>(
@@ -107,7 +108,6 @@ export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
       triggers: this.triggers,
       show: () => this.show()
     });
-    //this.setDatePickerConfig();
   }
 
   ngOnChanges(changes: SimpleChanges): void {

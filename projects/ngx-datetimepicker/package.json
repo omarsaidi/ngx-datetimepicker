@@ -4,9 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
-    "@angular/forms": "^8.2.14"
-  },
-  "dependencies": {
+    "@angular/forms": "^8.2.14",
     "ngx-bootstrap": "^5.3.2"
   }
 }

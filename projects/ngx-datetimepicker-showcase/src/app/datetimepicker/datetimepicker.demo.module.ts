@@ -17,7 +17,30 @@ import { ToggleMinutesSecondesComponent } from './demos/toggle-minutes-secondes/
 import { CustomStepsComponent } from './demos/custom-steps/custom-steps.component';
 import { CustomValidationComponent } from './demos/custom-validation/custom-validation.component';
 import { CustomValidationInvalidEventComponent } from './demos/custom-validation-invalid-event/custom-validation-invalid-event.component';
+import { ChangeLocaleComponent } from './demos/change-locale/change-locale.component';
 
+import {
+  arLocale, bgLocale, caLocale, csLocale, daLocale, deLocale, enGbLocale, esDoLocale, esLocale, esUsLocale, etLocale, frLocale, heLocale,
+  hiLocale, hrLocale, fiLocale, glLocale, huLocale, idLocale, itLocale, jaLocale, koLocale, ltLocale, lvLocale, mnLocale, nbLocale,
+  nlBeLocale, nlLocale, plLocale, ptBrLocale, ruLocale, roLocale, skLocale, slLocale, svLocale, thLocale, trLocale, viLocale,
+  zhCnLocale, ukLocale
+} from 'ngx-bootstrap/locale';
+import { LocaleData, defineLocale } from 'ngx-bootstrap/chronos';
+
+const locales = [
+  arLocale, bgLocale, caLocale, csLocale, daLocale, deLocale, enGbLocale, esDoLocale, esLocale, esUsLocale, etLocale, frLocale,
+  heLocale, hiLocale, hrLocale, fiLocale, glLocale, huLocale, idLocale, itLocale, jaLocale, koLocale, ltLocale, lvLocale, mnLocale,
+  nbLocale, nlBeLocale, nlLocale, plLocale, ptBrLocale, ruLocale, roLocale, skLocale, slLocale, svLocale, thLocale,
+  trLocale, ukLocale, viLocale, zhCnLocale
+];
+
+locales.forEach((locale: LocaleData) => {
+  if (!locale.abbr) {
+    return;
+  }
+
+  defineLocale(locale.abbr, locale);
+});
 
 @NgModule({
   declarations: [
@@ -32,7 +55,8 @@ import { CustomValidationInvalidEventComponent } from './demos/custom-validation
     ToggleMinutesSecondesComponent,
     CustomStepsComponent,
     CustomValidationComponent,
-    CustomValidationInvalidEventComponent
+    CustomValidationInvalidEventComponent,
+    ChangeLocaleComponent
   ],
   imports: [
     CommonModule,

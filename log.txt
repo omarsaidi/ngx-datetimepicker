@@ -1,0 +1,80 @@
+Linting "ngx-datetimepicker"...
+
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/base/datetimepicker-container.ts:4:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/base/datetimepicker-container.ts:5:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/base/datetimepicker-container.ts:6:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/base/datetimepicker-container.ts:7:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/base/datetimepicker-container.ts:8:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/base/datetimepicker-container.ts:74:2 - file should end with a newline
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:8:13 - The selector should be prefixed by "lib" (https://angular.io/guide/styleguide#style-02-08)
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:9:3 - 
+Use @HostBinding or
+@HostListener rather than the `host` metadata property (https://angular.io/styleguide#style-06-03)
+  
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:30:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:31:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:32:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:33:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:35:31 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:36:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:36:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:37:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:37:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:38:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:38:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:39:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:67:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:68:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:101:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker-input.directive.ts:108:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.spec.ts:12:3 - Missing semicolon
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.spec.ts:74:1 - trailing whitespace
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:13:13 - The selector should be prefixed by "lib" (https://angular.io/guide/styleguide#style-02-08)
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:18:22 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:19:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:19:12 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:20:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:20:5 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:21:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:21:5 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:22:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:22:5 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:23:5 - parameters are not aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:37:3 - In the class "DatetimepickerDirective", the output property "onShown" should not be prefixed with on
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:41:3 - In the class "DatetimepickerDirective", the output property "onHidden" should not be prefixed with on
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:43:3 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:61:1 - asterisks in jsdoc must be aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:62:1 - asterisks in jsdoc must be aligned
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:99:13 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:100:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:101:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:110:7 - comment must start with a space
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:245:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:249:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:253:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:257:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:262:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:265:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:267:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:269:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:271:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:273:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:275:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:277:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:279:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:281:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:283:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:285:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:287:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:289:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:291:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:293:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:295:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/datetimepicker.directive.ts:297:3 - Declaration of instance field not allowed after declaration of instance method. Instead, this should come at the beginning of the class/interface.
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/themes/datetimepicker-container.component.ts:7:13 - The selector should be prefixed by "lib" (https://angular.io/guide/styleguide#style-02-07)
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/themes/datetimepicker-container.component.ts:12:11 - variable name must be in lowerCamelCase, PascalCase or UPPER_CASE
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/themes/datetimepicker-container.component.ts:19:42 - missing whitespace
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/lib/themes/datetimepicker-container.component.ts:43:39 - Missing semicolon
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/public-api.ts:4:53 - Missing semicolon
+ERROR: D:/Workspace/External/ngx-datetimepicker/projects/ngx-datetimepicker/src/public-api.ts:5:47 - Missing semicolon
+

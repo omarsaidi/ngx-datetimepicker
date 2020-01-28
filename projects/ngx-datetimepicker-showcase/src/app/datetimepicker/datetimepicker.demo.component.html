@@ -109,6 +109,26 @@
                             <div>
                                 <app-custom-validation-invalid-event></app-custom-validation-invalid-event>
                             </div>
+                            <h4 id="change-locale">
+                                Change locale<a class="anchor-link" routerlink="."
+                                    href="#/datetimepicker#change-locale">#</a>
+                            </h4>
+                            <p>Datepicker can use different locales. <br>It's possible to change a locale by calling
+                                <code>use</code>
+                                method of <code>BsLocaleService</code>, list of available locales is in dropdown below.
+                            </p>
+                            <p>To use a different locale, you have to import it from <code>ngx-bootstrap/chronos</code>
+                                first, then
+                                define it in your <code>@NgModule</code> using function <code>defineLocale</code></p>
+                            <p>Example: </p>
+                            <code>import  &#123; defineLocale &#125; from 'ngx-bootstrap/chronos';</code><br>
+                            <code>import &#123; deLocale &#125; from 'ngx-bootstrap/locale';</code><br>
+                            <code>defineLocale('de', deLocale);</code>
+                            <br>
+                            <br>
+                            <div>
+                                <app-change-locale></app-change-locale>
+                            </div>
                         </div>
                     </div>
                 </div>
