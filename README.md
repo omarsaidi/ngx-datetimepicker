@@ -1,27 +1,37 @@
-# NgxDatetimepicker
+# ngx-datetimepicker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
-## Development server
+## Table of contents
+1. [Installation instructions](#installation-instructions)
+2. [Compatibility](#compatibility)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation instructions
 
-## Code scaffolding
+Install `ngx-datetimepicker` from `npm`:
+```bash
+npm install @mdcorp/ngx-datetimepicker --save
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Add needed package to NgModule imports:
+```
+import { DatetimepickerModule } from '@mdcorp/ngx-datetimepicker';
 
-## Build
+@NgModule({
+  ...
+  imports: [
+      DatetimepickerModule,
+      ...
+  ]
+  ...
+})
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Compatibility
 
-## Running unit tests
+The only two dependencies are [Angular](https://angular.io) and [ngx-bootstrap](https://github.com/valor-software/ngx-bootstrap).
+Here is the versions compatibility list:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| @mdcorp/ngx-datetimepicker |    Angular    |  ngx-bootstrap |
+| ---------------------------| ------------- | -------------- |
+| 1.x.x                      | 7.x.x - 8.x.x | 5.x.x          |
