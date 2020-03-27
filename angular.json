@@ -162,6 +162,41 @@
           }
         }
       }
+    },
+    "ngx-autocomplete": {
+      "projectType": "library",
+      "root": "projects/ngx-autocomplete",
+      "sourceRoot": "projects/ngx-autocomplete/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-autocomplete/tsconfig.lib.json",
+            "project": "projects/ngx-autocomplete/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-autocomplete/src/test.ts",
+            "tsConfig": "projects/ngx-autocomplete/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-autocomplete/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-autocomplete/tsconfig.lib.json",
+              "projects/ngx-autocomplete/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-datetimepicker"

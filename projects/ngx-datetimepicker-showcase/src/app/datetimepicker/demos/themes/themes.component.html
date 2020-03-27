@@ -13,7 +13,7 @@
     <div class="col-xs-12 col-12 col-md-5 col-lg-5 form-group">
         <div class="form-group">
             <div class="input-group">
-                <input class="form-control" placeholder="datetimepicker" datetimepicker [config]="bsConfig">
+                <input class="form-control" placeholder="datetimepicker" datetimepicker  #dp="datetimepicker" [config]="config">
                 <div class="input-group-btn">
                     <button class="btn btn-success" (click)="dp.show()" [attr.aria-expanded]="dp.isOpen" type="button">
                         Open

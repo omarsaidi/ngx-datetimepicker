@@ -24,6 +24,12 @@
       ],
       "ngx-datetimepicker/*": [
         "dist/ngx-datetimepicker/*"
+      ],
+      "ngx-autocomplete": [
+        "dist/ngx-autocomplete"
+      ],
+      "ngx-autocomplete/*": [
+        "dist/ngx-autocomplete/*"
       ]
     }
   },

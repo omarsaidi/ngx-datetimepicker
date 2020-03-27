@@ -16,11 +16,11 @@ import { TimepickerConfig } from 'ngx-bootstrap/timepicker';
 export class DatetimepickerDirective implements OnInit, OnDestroy, OnChanges {
 
   constructor(public _datepickerConfig: BsDatepickerConfig,
-    public _timepickerConfig: TimepickerConfig,
-    private readonly _elementRef: ElementRef,
-    _renderer: Renderer2,
-    _viewContainerRef: ViewContainerRef,
-    cis: ComponentLoaderFactory) {
+              public _timepickerConfig: TimepickerConfig,
+              private readonly _elementRef: ElementRef,
+              _renderer: Renderer2,
+              _viewContainerRef: ViewContainerRef,
+              cis: ComponentLoaderFactory) {
     this._datepickerConfig.dateInputFormat = 'LLL';
     Object.assign(this, this._datepickerConfig);
     Object.assign(this, this._timepickerConfig);

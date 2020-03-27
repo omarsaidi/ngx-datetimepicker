@@ -2,7 +2,7 @@
   <div class="row ml-0 mr-0 flex-center">
     <div class="pr-0 pb-3 pl-0 pt-0">
       <bs-datepicker-inline 
-      [(bsValue)]="value"></bs-datepicker-inline>
+      [(bsValue)]="value" [minDate]="minDate" [maxDate]="maxDate"></bs-datepicker-inline>
     </div>
   </div>
   <div class="row ml-0 mr-0 flex-center">
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="row ml-0 mr-0 flex-center buttons-container">
-    <button class="btn" (click)="onCancelClicked($event)">Annuler</button>
-    <button class="btn" (click)="onSetClicked($event)">Valider</button>
+    <button class="btn" (click)="onCancelClicked($event)">Annuler {{minDate}}</button>
+    <button class="btn" (click)="onSetClicked($event)">Valider {{maxDate}}</button>
   </div>
 </div>

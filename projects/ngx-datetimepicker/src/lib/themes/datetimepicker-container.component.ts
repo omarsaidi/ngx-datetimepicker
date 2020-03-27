@@ -16,7 +16,7 @@ export class DatetimepickerContainerComponent extends DatetimepickerAbstractComp
     datepickerConfig: BsDatepickerConfig,
     timepickerConfig: TimepickerConfig,
     renderer: Renderer2,
-    element: ElementRef,) {
+    element: ElementRef) {
     super();
     Object.assign(this, timepickerConfig);
     renderer.setStyle(element.nativeElement, 'display', 'block');

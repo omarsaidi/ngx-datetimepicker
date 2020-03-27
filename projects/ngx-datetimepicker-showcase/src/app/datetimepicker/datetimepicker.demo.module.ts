@@ -28,6 +28,8 @@ import {
 import { LocaleData, defineLocale } from 'ngx-bootstrap/chronos';
 import { PlacementComponent } from './demos/placement/placement.component';
 import { ThemesComponent } from './demos/themes/themes.component';
+import { MinMaxDateComponent } from './demos/min-max-date/min-max-date.component';
+import { MinMaxDateTimeComponent } from './demos/min-max-date-time/min-max-date-time.component';
 
 const locales = [
   arLocale, bgLocale, caLocale, csLocale, daLocale, deLocale, enGbLocale, esDoLocale, esLocale, esUsLocale, etLocale, frLocale,
@@ -60,7 +62,9 @@ locales.forEach((locale: LocaleData) => {
     CustomValidationInvalidEventComponent,
     ChangeLocaleComponent,
     PlacementComponent,
-    ThemesComponent
+    ThemesComponent,
+    MinMaxDateComponent,
+    MinMaxDateTimeComponent
   ],
   imports: [
     CommonModule,
